@@ -19,9 +19,9 @@ pipeline {
                     }
                }
          }
-        stage('ATC Checks'){
+        
              
-                    stage('ATC Checks DEFAULT'){
+         stage('ATC Checks DEFAULT'){
                         steps{
                             withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
                             sh ''' 
@@ -31,7 +31,7 @@ pipeline {
                         }
                      }
                      
-               }
+             
                
    }
 }
